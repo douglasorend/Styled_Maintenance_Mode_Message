@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+<id>Dougiefresh:BetterMaintenanceMsg</id>
+<name>Styled Maintenance Mode Message</name>
+<version>1.0</version>
+	
+<file name="$sourcedir/Errors.php">
+	<operation>
+		<search position="replace"><![CDATA[if (!empty($maintenance))
+		echo '<![CDATA[<]]><![CDATA[!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="robots" content="noindex" />
+		<title>', $mtitle, '</title>
+	</head>
+	<body>
+		<h3>', $mtitle, '</h3>
+		', $mmessage, '
+	</body>
+</html>';
+	// If this is a load average problem, display an appropriate message (but we still don't have language files!)
+	elseif ($loadavg)
+		echo '<![CDATA[<]]><![CDATA[!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="robots" content="noindex" />
+		<title>Temporarily Unavailable</title>
+	</head>
+	<body>
+		<h3>Temporarily Unavailable</h3>
+		Due to high stress on the server the forum is temporarily unavailable.  Please try again later.
+	</body>
+</html>';
+	// What to do?  Language files haven't and can't be loaded yet...
+	else
+		echo '<![CDATA[<]]><![CDATA[!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="robots" content="noindex" />
+		<title>Connection Problems</title>
+	</head>
+	<body>
+		<h3>Connection Problems</h3>
+		Sorry, SMF was unable to connect to the database.  This may be caused by the server being busy.  Please try again later.
+	</body>
+</html>';]]></search>
+		<add><![CDATA[// Do nothing if this is just a maintenance issue...
+	if (!empty($maintenance))
+	{	
+	}
+	// If this is a load average problem, display an appropriate message (but we still don't have language files!)
+	elseif ($loadavg)
+	{
+		$mtitle = 'Temporarily Unavailable';
+		$mmessage = 'Due to high stress on the server the forum is temporarily unavailable.  Please try again later.';
+	}
+	else
+	// What to do?  Language files haven't and can't be loaded yet...
+	{
+		$mtitle = 'Connection Problems';
+		$mmessage = 'Sorry, SMF was unable to connect to the database.  This may be caused by the server being busy.  Please try again later.';
+	}
+	
+	echo '<![CDATA[<]]><![CDATA[!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" type="text/css" href="Themes/default/css/index.css?fin20" />
+	<meta name="robots" content="noindex" />
+	<title>', $mtitle, '</title>
+</head>
+<body>
+<div id="wrapper" style="width: 90%">
+	<div id="header"><div class="frame">
+		<div id="top_section">
+			<h1 class="forumtitle">', $mbname, '</h1>
+			<img id="smflogo" src="Themes/default/images/smflogo.png" alt="Simple Machines Forum" title="Simple Machines Forum" />
+		</div>
+		<div class="user">
+			<br class="clear" /><br class="clear" /><br class="clear" /><br class="clear" />
+		</div>
+	</div></div>
+	<div id="content_section"><div class="frame">
+		<div id="main_content_screen">
+			<div class="cat_bar"><h3 class="catbg">', $mtitle, '</h3></div>
+			<p>', $mmessage, '</p>
+			<br class="clear" />
+			</div>
+		</div>
+	</div>
+	<div id="footer_section"><div class="frame" style="height: 40px;">
+		<div class="smalltext"><a href="http://www.simplemachines.org/" title="Simple Machines Forum" target="_blank" class="new_win">SMF &copy; 2013, Simple Machines</a></div>
+	</div></div>
+</div>
+</body>
+</html>';]]></add>
+	</operation>
+</file>
+</modification>
