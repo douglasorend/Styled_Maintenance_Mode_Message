@@ -1,16 +1,18 @@
-[hr]
-[center][color=red][size=16pt][b]STYLED MAINTENANCE MODE MESSAGE v1.4[/b][/size][/color]
-[url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=3952]Link to Mod[/url]
-[/center]
-[hr]
+-------
 
-[color=blue][b][size=12pt][u]Introduction[/u][/size][/b][/color]
-SMF has [b]TWO[/b] maintenance modes, as defined in [b]Settings.php[/b] by the variable [b]$maintenance[/b] in your forum folder.  Setting this variable to [b]1[/b] allows the adminstrators access to perform any necessary actions that don't require taking the database offline.  Setting this variable to [b]2[/b] (hardcore maintenance mode) makes the forum itself unaccessable for [b]EVERYBODY[/b].  Not even adminstrators can log into the forum.
+# STYLED MAINTENANCE MODE MESSAGE v1.4
 
-[color=blue][b][size=12pt][u]What This Mod Changes[/u][/size][/b][/color]
-When any Simple Machines forum is in maintenance mode (where [i]$maintenance[/i] in [b]Settings.php[/b] is set to 2), there is absolutely no CSS style to make the maintenance message look consistent with the rest of the site.  This mod attempts to resolves this issue, using the default theme CSS, to style the maintenance mode message shown to the user.  
+[**By Dougiefresh**](http://www.simplemachines.org/community/index.php?action=profile;u=253913) -> [Link to Mod](http://custom.simplemachines.org/mods/index.php?mod=3952)
 
-[url=https://www.simplemachines.org/community/index.php?action=profile;u=318771]Arantor[/url] stated in [url=https://www.simplemachines.org/community/index.php?topic=528839.msg3755027#msg3755027]this post[/url]:
+-------
+
+## Introduction
+SMF has **TWO** maintenance modes, as defined in **Settings.php** by the variable **$maintenance** in your forum folder.  Setting this variable to **1** allows the adminstrators access to perform any necessary actions that don't require taking the database offline.  Setting this variable to **2** (hardcore maintenance mode) makes the forum itself unaccessable for **EVERYBODY**.  Not even adminstrators can log into the forum.
+
+## What This Mod Changes
+When any Simple Machines forum is in maintenance mode (where *$maintenance* in **Settings.php** is set to 2), there is absolutely no CSS style to make the maintenance message look consistent with the rest of the site.  This mod attempts to resolves this issue, using the default theme CSS, to style the maintenance mode message shown to the user.  
+
+[Arantor](https://www.simplemachines.org/community/index.php?action=profile;u=318771) stated in [this post](https://www.simplemachines.org/community/index.php?topic=528839.msg3755027#msg3755027):
 [quote]
 There are two levels of maintenance mode. General maintenance mode - which shows the theme like it should, and hardcore maintenance mode, which shows a basic page.
 
@@ -18,20 +20,21 @@ Considering that the ONLY time the white screen should be applicable is during u
 [/quote]
 (Yes, there are several more lines in the post which are omitted!)
 
-[color=blue][b][size=12pt][u]Restrictions[/u][/size][/b][/color]
+## Restrictions
 Since theme support has not been loaded as of this point, other themes cannot be selected within the UI at this point.  This may change in future versions, but I doubt it.
 
-[color=blue][b][size=12pt][u]Admin Settings[/u][/size][/b][/color]
+## Admin Settings
 There are none.  You must uninstall this mod to remove it.
 
-[color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
+## Compatibility Notes
 This mod was tested on SMF 2.0.9, but should work on SMF 2.1 Beta 1, as well as SMF 2.0 and up.  SMF 1.x is not and will not be supported.
 
-[color=blue][b][size=12pt][u]Changelog[/u][/size][/b][/color]
-The changelog can be viewed at [url=http://www.xptsp.com/board/free-modifications/styled-maintenance-mode-message/?tab=1]XPtsp.com[/url].
+## Changelog
+The changelog can be viewed at [XPtsp.com](http://www.xptsp.com/board/free-modifications/styled-maintenance-mode-message/?tab=1).
 
-[color=blue][b][size=12pt][u]License[/u][/size][/b][/color]
+## License
 Copyright (c) 2015 - 2018, Douglas Orend
+
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
