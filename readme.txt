@@ -1,5 +1,5 @@
 [hr]
-[center][color=red][size=16pt][b]STYLED MAINTENANCE MODE MESSAGE v1.1[/b][/size][/color]
+[center][color=red][size=16pt][b]STYLED MAINTENANCE MODE MESSAGE v1.2[/b][/size][/color]
 [url=http://www.simplemachines.org/community/index.php?action=profile;u=253913][b]By Dougiefresh[/b][/url] -> [url=http://custom.simplemachines.org/mods/index.php?mod=3952]Link to Mod[/url]
 [/center]
 [hr]
@@ -14,7 +14,7 @@ Since theme support has not been loaded as of this point, other themes cannot be
 There are none.  You must uninstall this mod to remove it.
 
 [color=blue][b][size=12pt][u]Compatibility Notes[/u][/size][/b][/color]
-This mod was tested with SMF v2.0.9, but should work with earlier versions.  SMF 1.x is not and will not be supported.
+This mod was tested on SMF 2.0.9, but should work on SMF 2.1 Beta 1, as well as SMF 2.0 and up.  SMF 1.x is not and will not be supported.
 
 [color=blue][b][size=12pt][u]Changelog[/u][/size][/b][/color]
 The changelog has been removed and can be seen at [url=http://www.xptsp.com/board/index.php?topic=18.msg142#msg142]XPtsp.com[/url].
